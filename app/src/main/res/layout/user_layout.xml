@@ -12,11 +12,12 @@
         android:padding="8dp"
         android:text="Asilbek"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic"
+        android:textColor="#3D8FE1"/>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@id/txt_name"
         android:layout_marginTop="5dp"
         android:background="@color/black" />
