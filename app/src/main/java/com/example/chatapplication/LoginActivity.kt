@@ -32,16 +32,16 @@ class LoginActivity : AppCompatActivity() {
 //        btnLogin = findViewById(R.id.btnLogin)
 //        btnSignUp = findViewById(R.id.btnSignUp)
 
-        binding.btnSignUp.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
-            finish()
-            startActivity(intent)
-        }
-        binding.btnLogin.setOnClickListener {
-            var email = binding.edtEmail.text.toString()
-            var password = binding.edtPassword.text.toString()
-            login(email,password)
-        }
+//        binding.btnSignUp.setOnClickListener {
+//            val intent = Intent(this, SignUpActivity::class.java)
+//            finish()
+//            startActivity(intent)
+//        }
+//        binding.btnLogin.setOnClickListener {
+//            var email = binding.edtEmail.text.toString()
+//            var password = binding.edtPassword.text.toString()
+//            login(email,password)
+//        }
 
     }
 
