@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/linear"
     tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back_w"
         android:orientation="vertical">
         <FrameLayout
             android:layout_width="wrap_content"
@@ -31,9 +30,8 @@
        <androidx.cardview.widget.CardView
            android:layout_width="match_parent"
            android:layout_height="50dp"
-           app:cardBackgroundColor="#7558B4DD"
            app:cardCornerRadius="25dp"
-           app:cardElevation="8dp"
+           app:cardElevation="4dp"
            android:layout_marginTop="100dp"
            android:layout_marginLeft="30dp"
            android:layout_marginRight="30dp">
@@ -42,8 +40,7 @@
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:layout_below="@id/edt_password"
-               android:backgroundTint="#7558B4DD"
-               android:background="#7558B4DD"
+               android:background="@drawable/linear"
                android:textColor="@color/white"
                android:textStyle="italic"
                android:textSize="14sp"
@@ -55,9 +52,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:cardBackgroundColor="#7558B4DD"
             app:cardCornerRadius="25dp"
-            app:cardElevation="8dp"
+            app:cardElevation="4dp"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp">
@@ -69,8 +65,7 @@
                     android:layout_height="match_parent"
                     android:hint="Enter password"
                     android:layout_gravity="top"
-                    android:background="#7558B4DD"
-                    android:backgroundTint="#7558B4DD"
+                    android:background="@drawable/linear"
                     android:textSize="14sp"
                     android:textColor="@color/white"
                     android:textStyle="italic"/>
@@ -88,8 +83,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:text="Register"
-                android:textSize="16sp"
-                android:textColor="#0CF3DC"
+                android:textSize="18sp"
+                android:textColor="#FFF700"
                 android:textStyle="italic|bold"
                 android:layout_marginRight="8dp"/>
             <View
@@ -114,17 +109,17 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_Login"
             android:layout_width="100dp"
-            android:layout_height="50dp"
-            app:cardCornerRadius="25dp"
-            app:cardBackgroundColor="#A343ABDA"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
-            app:cardMaxElevation="8dp">
+            app:cardMaxElevation="4dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Login"
+                android:background="@drawable/linear"
                 android:textStyle="italic|bold"
                 android:textSize="18sp"/>
 
@@ -135,4 +130,4 @@
 
 
 
-</RelativeLayout>
+</FrameLayout>

@@ -34,7 +34,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnSignUp.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
-            finish()
             startActivity(intent)
         }
         binding.btnLogin.setOnClickListener {
@@ -54,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent)
+                        finish()
                     } else {
                         Toast.makeText(this@LoginActivity,"User does not exist",Toast.LENGTH_SHORT).show()
                     }

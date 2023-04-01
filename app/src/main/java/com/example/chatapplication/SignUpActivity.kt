@@ -27,6 +27,11 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
 //        supportActionBar?.hide()
 
         mAuth = FirebaseAuth.getInstance()
@@ -45,19 +50,26 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun signUp(name: String, email: String, password: String) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    addUserToDatabase(name, email, mAuth.currentUser?.uid!!)
-                    val intent = Intent(this@SignUpActivity, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
-
-                } else {
-                    Toast.makeText(this@SignUpActivity, "Some error occurred", Toast.LENGTH_SHORT)
-                        .show()
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()){
+            Toast.makeText(this@SignUpActivity,"xatoo",Toast.LENGTH_SHORT).show()
+        }else {
+            mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        addUserToDatabase(name, email, mAuth.currentUser?.uid!!)
+                        val intent = Intent(this@SignUpActivity, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            "Some error occurred",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
                 }
-            }
+        }
     }
 
     private fun addUserToDatabase(name: String, email: String, uid: String) {
