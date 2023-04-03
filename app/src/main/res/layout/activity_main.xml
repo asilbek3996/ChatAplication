@@ -5,63 +5,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/linear"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/shapped"
+        android:background="@drawable/main_back"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/smdapp"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/smart_chat"
-                android:textStyle="bold|italic"
-                android:textSize="18sp"
-                android:textColor="#5CA3EA"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shaped"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:orientation="vertical">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/userRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                tools:listitem="@layout/user_layout" />
-        </LinearLayout>
         <FrameLayout
             android:id="@+id/flContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
             android:layout_weight="1"/>
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FB2E4697"
-            app:itemIconTint="#000"
-            app:itemTextColor="#000"
-            app:labelVisibilityMode="selected"
+
+            app:itemIconTint="@color/white"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:itemTextColor="@color/white"
+            app:labelVisibilityMode="auto"
             app:menu="@menu/bottom_navigation_menu"/>
     </LinearLayout>
 

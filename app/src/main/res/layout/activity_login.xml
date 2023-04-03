@@ -10,14 +10,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/main_back"
         android:orientation="vertical">
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
+            android:background="@drawable/shape"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/app_logo"
                 android:layout_width="150dp"
@@ -27,107 +30,133 @@
         </FrameLayout>
 
 
-       <androidx.cardview.widget.CardView
-           android:layout_width="match_parent"
-           android:layout_height="50dp"
-           app:cardCornerRadius="25dp"
-           app:cardElevation="4dp"
-           android:layout_marginTop="100dp"
-           android:layout_marginLeft="30dp"
-           android:layout_marginRight="30dp">
-           <EditText
-               android:id="@+id/edt_email"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:layout_below="@id/edt_password"
-               android:background="@drawable/linear"
-               android:textColor="@color/white"
-               android:textStyle="italic"
-               android:textSize="14sp"
-               android:inputType="textEmailAddress"
-               android:hint="Enter email @gmail.com"
-               android:paddingLeft="13dp" />
-       </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="30dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp">
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edt_password"
+                android:background="@drawable/bacc"
+                android:hint="Enter email @gmail.com"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="13dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="4dp"
-            android:layout_marginTop="18dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
-                <EditText
-                    android:id="@+id/edt_password"
-                    android:layout_width="match_parent"
-                    android:paddingLeft="13dp"
-                    android:inputType="numberPassword"
-                    android:layout_height="match_parent"
-                    android:hint="Enter password"
-                    android:layout_gravity="top"
-                    android:background="@drawable/linear"
-                    android:textSize="14sp"
-                    android:textColor="@color/white"
-                    android:textStyle="italic"/>
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="30dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp">
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:background="@drawable/bacc"
+                android:hint="Enter password"
+                android:inputType="numberPassword"
+                android:paddingLeft="13dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic" />
 
         </androidx.cardview.widget.CardView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
             android:layout_marginTop="12dp"
+            android:gravity="end"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/btn_SignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
                 android:gravity="end"
                 android:text="Register"
-                android:textSize="18sp"
                 android:textColor="#FFF700"
-                android:textStyle="italic|bold"
-                android:layout_marginRight="8dp"/>
+                android:textSize="18sp"
+                android:textStyle="italic|bold" />
+
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="#FFFFFF"/>
+                android:background="#FFFFFF" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="40dp"
                 android:gravity="end"
                 android:text="Forgot password ?"
                 android:textSize="14sp"
-                android:textStyle="italic|normal"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="4dp"/>
+                android:textStyle="italic|normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btn_Login"
+                android:layout_width="164dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bacc"
+                android:gravity="center"
+                android:text="Login"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
         </LinearLayout>
 
 
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/btn_Login"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            app:cardCornerRadius="20dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginTop="80dp"-->
+        <!--            app:cardMaxElevation="4dp">-->
+        <!--            <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Login"-->
+        <!--                android:background="@drawable/linear"-->
+        <!--                android:textStyle="italic|bold"-->
+        <!--                android:textSize="18sp"/>-->
 
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btn_Login"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            app:cardMaxElevation="4dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Login"
-                android:background="@drawable/linear"
-                android:textStyle="italic|bold"
-                android:textSize="18sp"/>
-
-        </androidx.cardview.widget.CardView>
+        <!--        </androidx.cardview.widget.CardView>-->
 
 
     </LinearLayout>
-
 
 
 </FrameLayout>
